@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import type { NextPage } from 'next';
 import Head from 'next/head';
+import Image from 'next/image';
 
 const Home: NextPage = () => {
   const [currentSong, setCurrentSong] = useState<HTMLAudioElement | null>(null);
@@ -36,7 +37,7 @@ const Home: NextPage = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           <div className="flex flex-col items-center">
             <div className="w-64 h-64 border shadow-lg rounded-lg cursor-pointer transform transition duration-500 hover:rotate-3" onClick={() => playSong('forgetting_and_remembering.mp3')}>
-              <img src="forgetting_and_remembering.jpg" alt="Forgetting and Remembering Album Cover" className="w-full h-full object-cover"/>
+              <Image src="forgetting_and_remembering.jpg" alt="Forgetting and Remembering Album Cover" className="w-full h-full object-cover"/>
               <span style={{top: '-20px', right: '0'}} className="absolute transform rotate-15 text-2xl text-yellow-400">👑</span>
             </div>
             <p className="mt-2 text-gray-700 text-base text-center">
@@ -47,7 +48,7 @@ const Home: NextPage = () => {
 
           <div className="flex flex-col items-center">
             <div className="w-64 h-64 border shadow-lg rounded-lg overflow-hidden cursor-pointer transform transition duration-500 hover:rotate-3" onClick={() => playSong('octopussy_disco.mp3')}>
-              <img src="octopussy_disco.jpg" alt="Octopussy Disco Album Cover" className="w-full h-full object-cover"/>
+              <Image src="octopussy_disco.jpg" alt="Octopussy Disco Album Cover" className="w-full h-full object-cover"/>
             </div>
             <p className="mt-2 text-gray-700 text-base text-center">
               Octopussy <br/> Disco <br/>
